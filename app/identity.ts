@@ -6,7 +6,7 @@
  */
 export const identity = {
   name: "Monthly spending",
-  description: "A monthly spending tracker.",
+  description: "Track your monthly expenses by category, with a month total, breakdown and chart.",
   accent: "#047857",
   initial: "M",
 } as const;
