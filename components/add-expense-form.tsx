@@ -12,7 +12,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { CATEGORIES } from "@/lib/data/categories";
-import { todayIso, type ExpenseInput } from "@/lib/data/expenses-months";
+import { todayIso } from "@/lib/data/months";
+import type { ExpenseInput } from "@/lib/data/expenses";
 
 /** The largest amount the tracker accepts; anything above it is a typo, not a purchase. */
 const MAX_AMOUNT = 9_999_999;
