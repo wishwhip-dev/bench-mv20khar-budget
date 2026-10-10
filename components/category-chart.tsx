@@ -37,7 +37,7 @@ const compactCurrency = new Intl.NumberFormat("en-US", {
  */
 export function CategoryChart({ data }: { data: CategoryDatum[] }) {
   return (
-    <ChartContainer config={chartConfig} className="h-56 w-full sm:h-64">
+    <ChartContainer config={chartConfig} className="aspect-auto h-56 w-full sm:h-64">
       <BarChart data={data} margin={{ top: 8, right: 4, left: 0, bottom: 0 }}>
         <CartesianGrid vertical={false} />
         <XAxis

@@ -111,7 +111,7 @@ export function SpendTracker() {
 
   if (!hydrated) {
     return (
-      <div className="grid gap-6" aria-busy="true">
+      <div className="grid grid-cols-1 gap-6" aria-busy="true">
         <Skeleton className="h-10 w-64 rounded-lg" />
         <Skeleton className="h-32 w-full rounded-xl" />
         <Skeleton className="h-48 w-full rounded-xl" />
