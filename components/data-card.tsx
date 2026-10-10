@@ -4,7 +4,7 @@ import { FileDrop } from "@/components/file-drop";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useDatabaseTransfer } from "@/lib/storage/react";
-import type { DatabaseHandle, TableMap } from "@/lib/storage/database";
+import type { AppDatabase } from "@/lib/storage/database";
 import type { Expense } from "@/lib/db";
 
 /**
@@ -12,7 +12,7 @@ import type { Expense } from "@/lib/db";
  * expense; an import is applied in one transaction and reported here. Kept reachable because
  * preview and the published site are different origins, and a browser can clear this data.
  */
-export function DataCard({ database }: { database: DatabaseHandle<{ expenses: Expense } & TableMap> }) {
+export function DataCard({ database }: { database: AppDatabase<{ expenses: Expense }> }) {
   const { state, exportToFile, importFromFile } = useDatabaseTransfer(database);
 
   return (
@@ -39,7 +39,7 @@ export function DataCard({ database }: { database: DatabaseHandle<{ expenses: Ex
         {state.kind === "working" && <p className="text-sm text-muted-foreground">Working…</p>}
         {state.kind === "imported" && (
           <p className="text-sm text-muted-foreground" role="status">
-            Imported {state.result.added} expense{state.result.added === 1 ? "" : "s"}.
+            Imported {state.result.rows} expense{state.result.rows === 1 ? "" : "s"}.
           </p>
         )}
         {state.kind === "error" && (
