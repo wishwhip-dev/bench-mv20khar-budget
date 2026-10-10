@@ -160,7 +160,7 @@ export function SpendTracker() {
         </div>
 
         <Card>
-          <CardContent className="grid gap-1 py-6 text-center">
+          <CardContent className="grid grid-cols-1 gap-1 py-6 text-center">
             <p className="text-sm font-medium text-muted-foreground">
               Total for {monthLabel(monthKey!)}
             </p>
@@ -192,7 +192,7 @@ export function SpendTracker() {
           <CardTitle className="text-base">By category</CardTitle>
           <CardDescription>Every category for {monthLabel(monthKey!)}, highest first.</CardDescription>
         </CardHeader>
-        <CardContent className="grid gap-5">
+        <CardContent className="grid grid-cols-1 gap-5">
           <CategoryChart data={breakdown satisfies CategoryDatum[]} />
           <ul className="grid gap-2.5">
             {breakdown.map((row) => (
