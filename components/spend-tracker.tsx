@@ -124,7 +124,7 @@ export function SpendTracker() {
   const maxCategory = breakdown[0]?.amount ?? 0;
 
   return (
-    <div className="grid gap-6">
+    <div className="grid grid-cols-1 gap-6">
       {status === "memory" && (
         <Alert>
           <AlertTitle>This browser will not keep your data</AlertTitle>
