@@ -54,7 +54,8 @@ export function SpendTracker() {
     [monthKey],
   );
 
-  const expenses = monthExpenses ?? [];
+  // A stable `[]` while loading, so memos below do not see a new array every render.
+  const expenses = useMemo(() => monthExpenses ?? [], [monthExpenses]);
 
   const total = useMemo(() => expenses.reduce((sum, expense) => sum + expense.amount, 0), [expenses]);
 
