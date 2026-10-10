@@ -223,7 +223,7 @@ export function SpendTracker() {
         </CardHeader>
         <CardContent>
           {isLoading ? (
-            <div className="grid gap-3" aria-busy="true">
+            <div className="grid grid-cols-1 gap-3" aria-busy="true">
               <Skeleton className="h-12 w-full rounded-lg" />
               <Skeleton className="h-12 w-full rounded-lg" />
             </div>

@@ -70,7 +70,7 @@ export function AddExpenseForm({ onAdd }: { onAdd: (input: ExpenseInput) => Prom
     ) : null;
 
   return (
-    <form onSubmit={handleSubmit} noValidate className="grid gap-4 sm:grid-cols-[1fr_1fr_1fr]">
+    <form onSubmit={handleSubmit} noValidate className="grid grid-cols-1 gap-4 sm:grid-cols-3">
       <div className="grid gap-1.5">
         <Label htmlFor="expense-amount">Amount</Label>
         <div className="relative">

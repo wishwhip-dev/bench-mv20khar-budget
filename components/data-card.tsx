@@ -24,7 +24,7 @@ export function DataCard({ database }: { database: DatabaseHandle<{ expenses: Ex
           backup.
         </CardDescription>
       </CardHeader>
-      <CardContent className="grid gap-3">
+      <CardContent className="grid grid-cols-1 gap-3">
         <Button type="button" variant="outline" onClick={() => void exportToFile()}>
           Export data
         </Button>
